@@ -1,0 +1,150 @@
+div.training .training-container {
+    text-align: center;
+}
+
+div.training .training-container .training-list {
+    text-align: center;
+    display: inline;
+    list-style: none;
+    padding: 0;
+}
+
+div.training .training-container .training-list li {
+    display: table-row;
+}
+
+div.training .training-container .training-list li>span {
+    padding-right: 35px;
+    margin-bottom: 10px;
+    display: table-cell;
+    position: relative;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+li {
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+div.training .training-container .training-list li:last-of-type span::after {
+    border-left-color: currentcolor;
+    border-left-style: none;
+    border-left-width: 0px;
+}
+
+div.training .training-container .training-list li>span::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    border-left-color: #BD5911;
+    border-left-style: solid;
+    border-left-width: 2px;
+    z-index: 0;
+    content: '';
+    display: block;
+    height: 200px;
+}
+
+div.training .training-container .training-list li>span .training-year {
+    display: block;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+div.training .training-container .training-list li>span .training-bullet {
+    background-image: url('./../images/bullet-orange.png');
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-bottom: 0;
+    display: block;
+    padding-right: 0;
+    /*vertical-align: initial;*/
+}
+
+div.training .training-container .training-list li div {
+    display: table-cell;
+}
+
+div.training .training-container .training-list li div ul {
+    background-color: #f1f2f4;
+    padding: 22px;
+    text-align: left;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    display: block;
+    position: relative;
+    border-radius: 0 6px 6px 6px;
+}
+
+ul {
+    list-style: none;
+}
+
+div.training .training-container .training-list li div ul::before {
+    border-right-color: #f1f2f4;
+    left: -18px;
+    width: 0;
+    height: 0;
+    content: '';
+    border-left-color: transparent;
+    border-left-style: solid;
+    border-left-width: 0px;
+    border-right-color: #f1f2f4;
+    border-right-style: solid;
+    border-right-width: 18px;
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 16px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+div.training .training-container .training-list li div ul li.training-year {
+    display: none;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+div.training .training-container .training-list li div ul li {
+    padding-right: 8px;
+    color: #372c39;
+    font-size: 15px;
+    text-align: left;
+    line-height: 22px;
+}
+
+div.training .training-container .training-list li div ul li.location {
+    color: #BD5911;
+}
+
+@media (min-width: 768px) {
+    div.training .training-container .training-list li div ul li.location::before {
+        color: #BD5911;
+        content: '|';
+        padding-right: 10px;
+    }
+    div.training .training-container .training-list li div ul li.training-year~li {
+        display: inline;
+    }
+}
+
+@media (max-width: 767px) {
+    div.training .training-container .training-list li>span .training-year {
+        display: none;
+    }
+    div.training .training-container .training-list li div ul li.training-year {
+        display: block;
+    }
+}
